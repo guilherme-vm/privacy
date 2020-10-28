@@ -1,0 +1,514 @@
+@font-face {
+    font-family: 'Sixtyfour';
+    src: url('../fonts/Sixtyfour.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'CaskaydiaCove';
+    src: url('../fonts/CaskaydiaCove.ttf') format('ttf');
+}
+
+html {
+}
+
+body{
+    background-color: black; 
+    transition:all 2s;
+}
+
+.whole{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    width: 100%;
+  
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 80px;
+    line-height: 60px;
+    font-family:'Sixtyfour';
+    margin-bottom: 0;  
+    letter-spacing: 0px;
+    color:white;
+    text-align: center;
+    
+}
+
+/*animação PRIVACY 1 expessura*/
+@keyframes esticar {
+    from {
+        font-variation-settings: "wght" 900;    /* começa a 900 weight */
+    }50% {
+        font-variation-settings: "wght" 200;    /* vai aos 200 */
+    } to {
+        font-variation-settings: "wght" 900;    /* regressa aos 900 */
+    }
+}
+
+/* primeiro PRIVACY */
+#first{
+    font-variation-settings: "wght" 900; 
+    transition: color 1.5s linear;
+    display: inline-block;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+}
+
+/*ativar ANIMAÇÃO do PRIVACY 1 com click*/
+#first.active{    
+    animation: esticar 1.5s;
+}
+
+#first:hover{    /*HOVER*/
+    color:black;
+}
+
+/* PRIVACY 2 */
+#second{
+    font-variation-settings: "wght" 200; 
+}
+
+/* PRIVACY 3 animação spin */
+@keyframes spin {
+       from {
+        letter-spacing: inherit;
+        font-variation-settings: "wght" 400; 
+    } 25% {
+        letter-spacing: -80px;
+        transform: scale(0.5);
+        font-variation-settings: "wght" 200;      
+    } 50% {
+        transform: scale(1.5)rotate(360deg);
+        font-variation-settings: "wght" 900;        
+    } 60% {
+        letter-spacing: 20px;
+        transform: scale(1.5)rotate(360deg) ;
+        font-variation-settings: "wght" 900;          
+    } to {
+        transform: scale(1)rotate(360deg);
+        letter-spacing: 0px;
+        font-variation-settings: "wght" 400; 
+    }
+}
+
+/* ativar animação PRIVACY 3 spin*/
+#third.active {
+    animation: spin 2.5s ease;
+}
+
+
+/* PRIVACY 4 */
+#fourth {
+      display: inline-block;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+}
+
+
+
+
+/* animação PRIVACY 4 */
+@keyframes matrixShadow {
+    from {
+    -webkit-text-fill-color: #00FF41;
+    -webkit-text-stroke: 1px #003B00;
+        font-variation-settings: "wght" 400; 
+    } 20% {
+    -webkit-text-fill-color: #008F11;
+    -webkit-text-stroke: 3px #0D0208;
+        font-variation-settings: "wght" 400; 
+    } 40% {
+    -webkit-text-fill-color: #00FF41;
+    -webkit-text-stroke: 1px #003B00;
+        font-variation-settings: "wght" 600; 
+    } 50% {
+    -webkit-text-fill-color: #008F11;
+    -webkit-text-stroke: 3px #003B00;
+        font-variation-settings: "wght" 900; 
+    } 75% {
+    -webkit-text-fill-color: #00FF41;
+    -webkit-text-stroke: 1px #0D0208;
+        font-variation-settings: "wght" 600; 
+    }to {
+    -webkit-text-fill-color: #00FF41;
+    -webkit-text-stroke: 3px #003B00; 
+        font-variation-settings: "wght" 500; 
+    }
+}
+
+/* PRIVACY 5 */
+#word{
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* letras de PRIVACY 5*/
+.word span{
+    text-transform: uppercase;
+    line-height: 180px;
+    font-family:'Sixtyfour';
+    margin:-30px -3px -3px -3px; 
+    color:white;
+    display: inline-block;
+    font-size: 70px;
+    vertical-align:top;
+    font-variation-settings: "wght" 200;
+}
+
+/* PRIVACY 5 - letra V */
+.word span:nth-child(4) {
+    font-size: 150px;
+    margin:6px -3px -3px -1px;
+    font-variation-settings: "wght" 300;
+}
+
+/* animação da letra "p" PRIVACY 5 */
+@keyframes p{
+    from{
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+        font-variation-settings: "wght" 200;
+    } to {
+        transform: rotate(360deg);
+         font-variation-settings: "wght" 200;
+    }
+}
+/* animação da letra "p" na volta PRIVACY 5 */
+@keyframes pRev{
+    from{
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+        font-variation-settings: "wght" 200;
+    }  50%{
+        font-variation-settings: "wght" 200;
+    }to {
+        transform: rotate(-360deg);
+        font-variation-settings: "wght" 200;
+    }
+}
+
+
+/* animação da letra "r" PRIVACY 5 */
+@keyframes r{
+    from{
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+    } 50% {
+        font-variation-settings: "wght" 400;
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* animação da letra "r" na volta PRIVACY 5 */
+@keyframes rRev{
+    from{
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+    } to {
+        transform: rotate(-360deg);
+    }
+}
+
+
+/* animação da letra "i" PRIVACY 5 */
+@keyframes i{
+    from{
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+    } 50%{
+        font-variation-settings: "wght" 600;
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* animação da letra "i" na volta PRIVACY 5 */
+@keyframes iRev{
+    from{
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+    } to {
+        transform: rotate(-360deg);
+    }
+}
+
+
+/* animação da letra "v" PRIVACY 5 */
+@keyframes v{
+    from{
+        transform: scale(1);
+    } 20%{
+        transform: scale(0.3);
+        font-variation-settings: "wght" 900;
+    }to {
+        transform: scale(1);
+        font-variation-settings: "wght" 300;
+    }
+}
+/* animação da letra "v" PRIVACY 5 */
+@keyframes vRev {
+    from {
+    } 50% {
+        font-variation-settings: "wght" 200;
+        -webkit-text-fill-color: black;
+        -webkit-text-stroke: 1px white;
+        transform: scale(1);   
+    } 70% {
+        font-variation-settings: "wght" 900;
+        -webkit-text-fill-color: black;
+        -webkit-text-stroke: 1px white;
+        transform: scale(1.5);
+    }90% {
+        font-variation-settings: "wght" 200;
+        -webkit-text-fill-color: black;
+        -webkit-text-stroke: 1px white;
+    }91% {
+        font-variation-settings: "wght" 200;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke: 1px white;
+    }to {
+        font-variation-settings: "wght" 300;
+        -webkit-text-fill-color: white;
+    }
+}
+
+
+/* animação da letra "a" PRIVACY 5 */
+@keyframes a{
+    from{
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+    }  50%{
+        font-variation-settings: "wght" 600;
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+/* animação da letra "a" na volta PRIVACY 5 */
+@keyframes aRev{
+    from{
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+    }  to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* animação da letra "c" PRIVACY 5 */
+@keyframes c{
+    from{
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+    } 50%{
+        font-variation-settings: "wght" 400;
+    }to {
+        transform: rotate(-360deg);
+    }
+}
+/* animação da letra "c" na volta PRIVACY 5 */
+@keyframes cRev{
+    from{
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+    } 50%{
+    }to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* animação da letra "y" PRIVACY 5 */
+@keyframes y{
+    from{
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+    } to {
+        transform: rotate(-360deg);
+    }
+}
+/* animação da letra "y" na volta PRIVACY 5 */
+@keyframes yRev{
+    from{
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+
+* {cursor: url(https://cur.cursors-4u.net/cursors/cur-11/cur1054.cur), auto !important;} 
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 505px) {   /*smartphone na vertical*/
+
+    body{
+        background-color: black;
+    }
+    
+    #first:hover{   
+    color:white;
+}
+    
+    h1{
+        font-size: 40px;
+    }
+    
+    .word span:nth-child(4) {
+    font-size: 80px;
+    margin: 0;
+    margin-top: -10px;
+}
+    
+    .word span{
+    line-height: 130px;
+    font-size: 35px;
+}
+    
+    
+    
+    @keyframes spin {
+      25% {
+        letter-spacing: -40px;
+        transform: scale(0.5);
+        font-variation-settings: "wght" 200; 
+        
+        
+    }50% {
+        transform: scale(1.5)rotate(360deg);
+        font-variation-settings: "wght" 900; 
+        
+    }60% {
+        letter-spacing: -5px;
+        transform: scale(1.5)rotate(360deg) ;
+        font-variation-settings: "wght" 900;          
+    } to {
+        transform: scale(1)rotate(360deg);
+        font-variation-settings: "wght" 400; 
+    }
+}
+    
+
+}
+
+
+
+@media screen and (max-height: 400px) {  /*horizontal - iPhone 8 & 6*/
+    
+        h1{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    
+    #first:hover{   
+    color:white;
+}
+    .word span:nth-child(4) {
+    font-size:75px;
+        margin-top: -5px;
+}
+    
+    .word span{
+    line-height: 95px;
+    font-size: 25px;
+        letter-spacing: -1px;
+
+}
+    
+    @keyframes spin {
+       from {
+        letter-spacing: inherit;
+        font-variation-settings: "wght" 400; 
+
+    }25% {
+        letter-spacing: -30px;
+        transform: scale(0.5);
+        font-variation-settings: "wght" 200; 
+        
+        
+    }50% {
+        transform: scale(2)rotate(360deg);
+        font-variation-settings: "wght" 900; 
+        
+    }60% {
+        letter-spacing: 10px;
+        transform: scale(2)rotate(360deg) ;
+        transform: scale(2)rotate(360deg) ;
+        font-variation-settings: "wght" 900;          
+    } to {
+        transform: scale(1)rotate(360deg);
+        letter-spacing: 0px;
+        font-variation-settings: "wght" 400; 
+    }
+}
+    
+}
+
+
+
+
+
+@media screen and (min-height: 401px) and (max-height: 505px) {  /*horizontal - iPhone 8plus & 6plus*/
+    
+        h1{
+        font-size: 40px;
+        line-height: 35px;
+    }
+    
+    #first:hover{   
+    color:white;
+}
+    
+    .word span:nth-child(4) {
+    font-size:95px;
+}
+    
+    .word span{
+    line-height: 95px;
+    font-size: 30px;
+
+}
+    
+    @keyframes spin {
+       from {
+        letter-spacing: inherit;
+        font-variation-settings: "wght" 400; 
+
+    }25% {
+        letter-spacing: -40px;
+        transform: scale(0.5);
+        font-variation-settings: "wght" 200; 
+        
+        
+    }50% {
+        transform: scale(2)rotate(360deg);
+        font-variation-settings: "wght" 900; 
+        
+    }60% {
+        letter-spacing: 7px;
+        transform: scale(2)rotate(360deg) ;
+        transform: scale(2)rotate(360deg) ;
+        font-variation-settings: "wght" 900;          
+    } to {
+        transform: scale(1)rotate(360deg);
+        letter-spacing: 0px;
+        font-variation-settings: "wght" 400; 
+    }
+}
+    
+}
+
