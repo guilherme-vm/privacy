@@ -21,7 +21,13 @@ var p6 = d.getElementById("c");
 var p7 = d.getElementById("y");
 
 
+    //verificar se o Browser a ser usado é o Chrome
+var is_chrome = !!window.chrome;
 
+    //se não for o Chrome, alerta a recomendar usar o Chrome
+if (is_chrome != true){
+    alert("Your browser does not support Variable Fonts. Please use the Google Chrome browser for a better experience");
+}
 
 
 var x = window.matchMedia("(min-width: 806px)");
